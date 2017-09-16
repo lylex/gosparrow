@@ -8,13 +8,11 @@ import (
 	"github.com/codegangsta/negroni"
 	"github.com/tylerb/graceful"
 
-	"lylex.com/audit/app"
-	"lylex.com/audit/consts"
-	"lylex.com/audit/lib/discovery"
-	"lylex.com/audit/lib/log"
-	"lylex.com/audit/lib/utils"
-	"lylex.com/audit/routes"
-	"lylex.com/audit/workers"
+	"lylex.com/gosparrow/app"
+	"lylex.com/gosparrow/consts"
+	"lylex.com/gosparrow/lib/log"
+	"lylex.com/gosparrow/lib/utils"
+	"lylex.com/gosparrow/routes"
 )
 
 // version represents the application version, and it is valued during build time
@@ -26,25 +24,10 @@ func main() {
 		port = consts.ServiceDefaultPort
 	}
 
-	discovery := discovery.New()
-	localDiscovery, globalDiscovery, err := discovery.RetrieveDiscoveryConfigs()
-	if err != nil {
-		log.App(consts.LogLevelError,
-			fmt.Sprintf(consts.ErrFailInitDiscovery, err.Error()))
-	}
-
 	appCtx := &app.Context{
 		Version:   version,
 		Name:      consts.ServiceName,
 		StartedAt: utils.Now(),
-	}
-
-	if err = log.InitLog(appCtx.LocalDiscovery.LogLevel); err != nil {
-		log.App(consts.LogLevelError,
-			fmt.Sprintf("Failed to set log level: %s",
-				err.Error(),
-			),
-		)
 	}
 
 	app.SetContext(appCtx.Assimilate())
