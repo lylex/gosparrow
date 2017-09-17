@@ -1,3 +1,0 @@
-
-// Allow gorutines in all the cpus, go by default makes it runs in one
-runtime.GOMAXPROCS(runtime.NumCPU())
