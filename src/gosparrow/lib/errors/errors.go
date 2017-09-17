@@ -3,7 +3,7 @@ package errors
 import (
 	"errors"
 
-	"lylex.com/gosparrow/consts"
+	"gosparrow/consts"
 )
 
 // APIError represents common api error

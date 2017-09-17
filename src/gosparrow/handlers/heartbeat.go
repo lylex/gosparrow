@@ -3,7 +3,7 @@ package handlers
 import (
 	"net/http"
 
-	"lylex.com/gosparrow/app"
+	"gosparrow/app"
 )
 
 // Heartbeat used to offer heartbeat check for the service

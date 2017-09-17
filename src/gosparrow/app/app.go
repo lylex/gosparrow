@@ -9,10 +9,10 @@ import (
 	"strings"
 	"time"
 
-	"lylex.com/gosparrow/consts"
-	"lylex.com/gosparrow/lib/errors"
-	"lylex.com/gosparrow/lib/log"
-	"lylex.com/gosparrow/lib/utils"
+	"gosparrow/consts"
+	"gosparrow/lib/errors"
+	"gosparrow/lib/log"
+	"gosparrow/lib/utils"
 )
 
 // Session represents the meta info of a Individual call

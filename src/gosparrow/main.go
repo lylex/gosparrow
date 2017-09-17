@@ -3,22 +3,26 @@ package main
 import (
 	"fmt"
 	"os"
+	"runtime"
 	"time"
 
 	"github.com/codegangsta/negroni"
 	"github.com/tylerb/graceful"
 
-	"lylex.com/gosparrow/app"
-	"lylex.com/gosparrow/consts"
-	"lylex.com/gosparrow/lib/log"
-	"lylex.com/gosparrow/lib/utils"
-	"lylex.com/gosparrow/routes"
+	"gosparrow/app"
+	"gosparrow/consts"
+	"gosparrow/lib/log"
+	"gosparrow/lib/utils"
+	"gosparrow/routes"
 )
 
 // version represents the application version, and it is valued during build time
 var version string
 
 func main() {
+	// Allow gorutines in all the cpus, go by default makes it runs in one
+	runtime.GOMAXPROCS(runtime.NumCPU())
+
 	port := os.Getenv(consts.EnvVariablePort)
 	if port == "" {
 		port = consts.ServiceDefaultPort

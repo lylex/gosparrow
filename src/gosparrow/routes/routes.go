@@ -5,8 +5,8 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"lylex.com/gosparrow/app"
-	"lylex.com/gosparrow/handlers"
+	"gosparrow/app"
+	"gosparrow/handlers"
 )
 
 // Route used to store a route item

@@ -5,8 +5,8 @@ import (
 
 	"github.com/Sirupsen/logrus"
 
-	"lylex.com/gosparrow/consts"
-	"lylex.com/gosparrow/lib/utils"
+	"gosparrow/consts"
+	"gosparrow/lib/utils"
 )
 
 // InitLog used to initialize a logger with log level, default is info level

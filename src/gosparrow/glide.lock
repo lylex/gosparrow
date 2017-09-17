@@ -1,0 +1,27 @@
+hash: c743da7c1da39706c31cfa5412867be2a97a9682f3b5ac7c175e12eef84984a7
+updated: 2017-09-17T22:31:52.758711515+08:00
+imports:
+- name: github.com/codegangsta/negroni
+  version: fde5e16d32adc7ad637e9cd9ad21d4ebc6192535
+- name: github.com/gorilla/context
+  version: 1ea25387ff6f684839d82767c1733ff4d4d15d0a
+- name: github.com/gorilla/mux
+  version: 24fca303ac6da784b9e8269f724ddeb0b2eea5e7
+- name: github.com/Sirupsen/logrus
+  version: f006c2ac4710855cf0f916dd6b77acf6b048dc6e
+- name: github.com/twinj/uuid
+  version: 835a10bbd6bce40820349a68b1368a62c3c5617c
+- name: github.com/tylerb/graceful
+  version: 4654dfbb6ad53cb5e27f37d99b02e16c1872fbbb
+- name: github.com/unrolled/render
+  version: a0ec58421ddf111bd7efd3b7087399ca7d5da2f1
+- name: golang.org/x/crypto
+  version: 7d9177d70076375b9a59c8fde23d52d9c4a7ecd5
+  subpackages:
+  - ssh/terminal
+- name: golang.org/x/sys
+  version: d4feaf1a7e61e1d9e79e6c4e76c6349e9cab0a03
+  subpackages:
+  - unix
+  - windows
+testImports: []

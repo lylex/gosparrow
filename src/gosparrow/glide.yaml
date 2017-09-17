@@ -1,0 +1,13 @@
+package: gosparrow
+import:
+- package: github.com/Sirupsen/logrus
+  version: ^1.0.3
+- package: github.com/codegangsta/negroni
+  version: ^0.2.0
+- package: github.com/gorilla/mux
+  version: ^1.5.0
+- package: github.com/twinj/uuid
+  version: ^1.0.0
+- package: github.com/tylerb/graceful
+  version: ^1.2.15
+- package: github.com/unrolled/render
