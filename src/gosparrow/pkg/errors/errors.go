@@ -3,7 +3,7 @@ package errors
 import (
 	"errors"
 
-	"gosparrow/consts"
+	"gosparrow/pkg/consts"
 )
 
 // APIError represents common api error

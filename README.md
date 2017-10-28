@@ -1,6 +1,6 @@
 # gosparrow
 
-A minimal go http server.
+A minimal toy go api server.
 
 ## Quick Start
 

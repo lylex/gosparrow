@@ -9,11 +9,12 @@ import (
 	"github.com/codegangsta/negroni"
 	"github.com/tylerb/graceful"
 
-	"gosparrow/app"
-	"gosparrow/consts"
-	"gosparrow/lib/log"
-	"gosparrow/lib/utils"
-	"gosparrow/routes"
+	"gosparrow/cmd/gosparrow/app"
+	"gosparrow/cmd/gosparrow/routes"
+
+	"gosparrow/pkg/consts"
+	"gosparrow/pkg/log"
+	"gosparrow/pkg/utils"
 )
 
 // version represents the application version, and it is valued during build time

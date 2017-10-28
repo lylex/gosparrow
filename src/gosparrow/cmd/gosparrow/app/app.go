@@ -9,10 +9,10 @@ import (
 	"strings"
 	"time"
 
-	"gosparrow/consts"
-	"gosparrow/lib/errors"
-	"gosparrow/lib/log"
-	"gosparrow/lib/utils"
+	"gosparrow/pkg/consts"
+	"gosparrow/pkg/errors"
+	"gosparrow/pkg/log"
+	"gosparrow/pkg/utils"
 )
 
 // Session represents the meta info of a Individual call
