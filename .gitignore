@@ -1,4 +1,1 @@
-bin/*
-pkg/*
-src/gosparrow/vendor/*
-src/gosparrow/gosparrow
+vendor/*

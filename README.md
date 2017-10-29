@@ -4,13 +4,12 @@ A minimal toy go api server.
 
 ## Quick Start
 
+    mkdir gosparrow_dir && export GOPATH=`pwd`
+    mkdir src && cd $_
     git clone https://github.com/lylex/gosparrow.git
     cd gosparrow
-    export GOPATH=`pwd`
-    cd src/gosparrow/
-    glide init
-    glide update
     glide install
+    cd cmd/gosparrow
     go build
 
 ## Architecture & Design
