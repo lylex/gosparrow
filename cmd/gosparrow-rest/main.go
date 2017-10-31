@@ -9,8 +9,8 @@ import (
 	"github.com/codegangsta/negroni"
 	"github.com/tylerb/graceful"
 
-	"gosparrow/cmd/gosparrow/app"
-	"gosparrow/cmd/gosparrow/routes"
+	"gosparrow/cmd/gosparrow-rest/app"
+	"gosparrow/cmd/gosparrow-rest/routes"
 
 	"gosparrow/pkg/consts"
 	"gosparrow/pkg/log"

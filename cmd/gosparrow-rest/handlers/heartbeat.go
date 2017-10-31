@@ -3,7 +3,7 @@ package handlers
 import (
 	"net/http"
 
-	"gosparrow/cmd/gosparrow/app"
+	"gosparrow/cmd/gosparrow-rest/app"
 )
 
 // Heartbeat used to offer heartbeat check for the service

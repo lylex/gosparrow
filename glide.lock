@@ -1,8 +1,16 @@
-hash: c743da7c1da39706c31cfa5412867be2a97a9682f3b5ac7c175e12eef84984a7
-updated: 2017-09-17T22:31:52.758711515+08:00
+hash: 966dd83a469896c9677401ce673b28afd256f57eb1e41e4eda5e5ed54b5d3327
+updated: 2017-10-31T17:02:31.608122071+08:00
 imports:
 - name: github.com/codegangsta/negroni
   version: fde5e16d32adc7ad637e9cd9ad21d4ebc6192535
+- name: github.com/golang/protobuf
+  version: 1643683e1b54a9e88ad26d98f81400c8c9d9f4f9
+  subpackages:
+  - proto
+  - ptypes
+  - ptypes/any
+  - ptypes/duration
+  - ptypes/timestamp
 - name: github.com/gorilla/context
   version: 1ea25387ff6f684839d82767c1733ff4d4d15d0a
 - name: github.com/gorilla/mux
@@ -19,9 +27,49 @@ imports:
   version: 7d9177d70076375b9a59c8fde23d52d9c4a7ecd5
   subpackages:
   - ssh/terminal
+- name: golang.org/x/net
+  version: c73622c77280266305273cb545f54516ced95b93
+  subpackages:
+  - context
+  - http2
+  - http2/hpack
+  - idna
+  - internal/timeseries
+  - lex/httplex
+  - trace
 - name: golang.org/x/sys
   version: d4feaf1a7e61e1d9e79e6c4e76c6349e9cab0a03
   subpackages:
   - unix
   - windows
+- name: golang.org/x/text
+  version: 44f4f658a783b0cee41fe0a23b8fc91d9c120558
+  subpackages:
+  - secure/bidirule
+  - transform
+  - unicode/bidi
+  - unicode/norm
+- name: google.golang.org/genproto
+  version: f676e0f3ac6395ff1a529ae59a6670878a8371a6
+  subpackages:
+  - googleapis/rpc/status
+- name: google.golang.org/grpc
+  version: 61d37c5d657a47e4404fd6823bd598341a2595de
+  subpackages:
+  - balancer
+  - codes
+  - connectivity
+  - credentials
+  - grpclb/grpc_lb_v1/messages
+  - grpclog
+  - internal
+  - keepalive
+  - metadata
+  - naming
+  - peer
+  - resolver
+  - stats
+  - status
+  - tap
+  - transport
 testImports: []

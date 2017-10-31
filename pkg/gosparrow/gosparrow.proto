@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.gosparrow";
+option java_outer_classname = "GosparrowProto";
+
+package gosparrow;
+
+// Gosparrow is the interface exported by the server.
+service Gosparrow {
+  // GetName used to get the app name.
+  rpc GetName (GetNameReq) returns (GetNameResp) {};
+}
+
+// GetNameReq represents the request to retrieve the app name.
+message GetNameReq {
+  string prefix = 1;
+}
+
+// GetNameResp represents the response to retrieve the app name
+message GetNameResp {
+  string name = 1;
+}

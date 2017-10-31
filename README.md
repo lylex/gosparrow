@@ -27,3 +27,14 @@ Learning togerher is greate thing. But I do not think you are intrested in such 
 It does nothing but a toy.
 
 
+**1. How to generate the proto file**
+
+```sh
+cd pkg/gosparrow
+protoc --go_out=plugins=grpc:. *.proto
+```
+**1. How to update the libraries and add them the glide.yml**
+
+```sh
+glide get github.com/Masterminds/cookoo
+```

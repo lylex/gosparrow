@@ -5,8 +5,8 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"gosparrow/cmd/gosparrow/app"
-	"gosparrow/cmd/gosparrow/handlers"
+	"gosparrow/cmd/gosparrow-rest/app"
+	"gosparrow/cmd/gosparrow-rest/handlers"
 )
 
 // Route used to store a route item
