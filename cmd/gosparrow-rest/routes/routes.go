@@ -42,6 +42,12 @@ var gRoutes = Routes{
 		"/heartbeat",
 		handlers.Heartbeat,
 	},
+	Route{
+		"GetName",
+		"GET",
+		"/name/{prefix}",
+		handlers.GetName,
+	},
 }
 
 func formateHandler(f func(*app.Session, http.ResponseWriter, *http.Request) (

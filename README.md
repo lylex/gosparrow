@@ -22,18 +22,18 @@ Learning togerher is greate thing. But I do not think you are intrested in such 
 
 ## FAQ
 
-**1. Why need this project?**
+**Q: Why need this project?**
 
 It does nothing but a toy.
 
 
-**1. How to generate the proto file**
+**Q: How to generate the proto file**
 
 ```sh
 cd pkg/gosparrow
 protoc --go_out=plugins=grpc:. *.proto
 ```
-**1. How to update the libraries and add them the glide.yml**
+**Q: How to update the libraries and add them the glide.yml**
 
 ```sh
 glide get github.com/Masterminds/cookoo
