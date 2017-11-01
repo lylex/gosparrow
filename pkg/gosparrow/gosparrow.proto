@@ -6,10 +6,16 @@ option java_outer_classname = "GosparrowProto";
 
 package gosparrow;
 
+import "google/api/annotations.proto";
+
 // Gosparrow is the interface exported by the server.
 service Gosparrow {
   // GetName used to get the app name.
-  rpc GetName (GetNameReq) returns (GetNameResp) {};
+  rpc GetName (GetNameReq) returns (GetNameResp) {
+    option (google.api.http) = {
+      get: "/name"
+    };
+  };
 }
 
 // GetNameReq represents the request to retrieve the app name.
