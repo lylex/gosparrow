@@ -1,18 +1,26 @@
-PROJECT := gosparrow
+include .env
+
 VERSION := $(shell git describe --tags --always --dirty)
 
-DOCKER_REGISTRY ?= 127.0.0.1:5000/local
-IMAGE := $(DOCKER_REGISTRY)/$(PROJECT)
-BUILD_IMAGE ?= golang:1.8
+BUILD_IMAGE ?= $(GOLANG_IMAGE_NAME):$(GOLANG_IMAGE_VERSION)
 
 SRC_DIRS := cmd pkg
+ALL_PROTOCALS := grpc rest
 ROOT_PKG := $(PROJECT)
+CMD_DIR := $(ROOT_PKG)/$(CMD_PKG)
+BUILDABLE_DIRS := $(notdir $(patsubst %/,%, $(wildcard $(CMD_PKG)/*/)))
 
 all: build
 
-build: bin/$(PROJECT)
+.PHONY: build
+build: $(addprefix build-, $(BUILDABLE_DIRS))
+build-%:
+	@$(MAKE) TARGET=$* perform-build
 
-bin/$(PROJECT):
+.PHONY: perform-build
+perform-build: bin/$(TARGET)
+
+bin/$(TARGET):
 	@echo "Building $@ in container..."
 	@docker run                          \
 	    --rm                             \
@@ -23,6 +31,8 @@ bin/$(PROJECT):
 	    $(BUILD_IMAGE)                   \
 	    /bin/sh -c "                     \
 	        VERSION=$(VERSION)           \
+	        TARGET=$(TARGET)             \
+	        CMD_PKG=$(CMD_PKG)           \
 	        ./build/build.sh             \
 	    "
 

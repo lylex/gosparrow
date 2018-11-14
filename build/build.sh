@@ -9,7 +9,7 @@ if [ -z "${VERSION}" ]; then
 fi
 
 HOME=$(dirname "${BASH_SOURCE[0]}")/..
-cd "$HOME/cmd/gosparrow-rest"
+cd "$HOME/$CMD_PKG/$TARGET"
 
 go install                                     \
     -installsuffix "static"
